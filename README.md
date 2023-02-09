@@ -31,3 +31,11 @@ prisma/schema.prisma
 ```
 npx prisma migrate dev --name init
 ```
+
+# Создаем новое React приложение
+## Сгенерируем новое React+ReduxToolkit приложение на Typesctipt. 
+
+client в строке ниже - это название папки, внутри которой будет создано React приложение, папка создаться автоматически
+```
+npx create-react-app client --template redux-typescript
+```
