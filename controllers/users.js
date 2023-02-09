@@ -2,6 +2,11 @@ const { prisma } = require("../prisma/prisma-client");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
+/**
+ * @route POST api/user/login
+ * @desc Логин
+ * @access Public
+ */
 const login = async (req, res) => {
   const { email, password } = req.body;
 
@@ -34,6 +39,11 @@ const login = async (req, res) => {
   }
 };
 
+/**
+ * @route POST api/user/register
+ * @desc Регистрация
+ * @access Public
+ */
 const register = async (req, res) => {
   const { email, password, name } = req.body;
 
@@ -80,6 +90,11 @@ const register = async (req, res) => {
   }
 };
 
+/**
+ * @route GET api/user/current
+ * @desc Текущий
+ * @access Private
+ */
 const current = async (req, res) => {
   return res.status(200).json(req.user);
 };
